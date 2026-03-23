@@ -17,6 +17,13 @@ export default function SocialResponsibilityPage() {
         eyebrow="Social responsibility"
         title="Committed to giving back to the community through meaningful training support"
         description="Mayura Corp actively participates in social responsibility initiatives that widen access to learning and support underserved communities."
+        imageSrc="/profile-assets/pdf-image-07-1242x1333.jpg"
+        imageAlt="Community-focused support activity outdoors"
+        highlights={[
+          "Discounted training for non-profits",
+          "Support for educational projects",
+          "Commitment to underserved communities"
+        ]}
       />
       <section className="container-shell grid gap-6 py-20 md:grid-cols-2">
         <article className="premium-outline card-surface rounded-[1.7rem] p-8">

@@ -19,6 +19,13 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="Comprehensive training services tailored to your unique requirements"
         description="Mayura Corp delivers high-quality professional training programs designed to meet evolving client needs across industries and leadership levels."
+        imageSrc="/profile-assets/pdf-image-04-1600x436.jpg"
+        imageAlt="Facilitator leading a professional training session"
+        highlights={[
+          "Customized training programs",
+          "Cutting-edge curriculum",
+          "Industry-recognized certification"
+        ]}
       />
       <section className="container-shell py-20">
         <div className="grid gap-6 md:grid-cols-2">

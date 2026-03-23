@@ -18,6 +18,13 @@ export default function AboutPage() {
         eyebrow="About Mayura Corp"
         title="A dynamic and forward-thinking company dedicated to professional growth"
         description={`${company.overview} ${company.profileIntro}`}
+        imageSrc="/profile-assets/pdf-image-06-1303x1333.jpg"
+        imageAlt="Professionals greeting and building a client relationship"
+        highlights={[
+          "Established in 2023",
+          "High-quality professional training",
+          "Growth-focused mission"
+        ]}
       />
       <section className="container-shell grid gap-8 py-20 md:grid-cols-[1.05fr_0.95fr]">
         <article className="premium-outline card-surface rounded-[1.8rem] p-8">
@@ -47,8 +54,21 @@ export default function AboutPage() {
       </section>
       <section className="section-shell-muted py-20">
         <div className="container-shell">
-        <h2 className="text-3xl font-semibold text-primary-deep">Core values</h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p className="font-sans text-xs font-semibold uppercase tracking-[0.34em] text-accent">
+              Core values
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold text-primary-deep md:text-5xl">
+              Principles that shape every engagement.
+            </h2>
+          </div>
+          <p className="max-w-2xl text-base leading-8 text-muted">
+            The Mayura Corp profile emphasizes values that reinforce trust,
+            professionalism, innovation, and close alignment with client needs.
+          </p>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
           {coreValues.map((value) => (
             <article key={value} className="card-surface rounded-[1.5rem] p-6">
               <h3 className="text-lg font-semibold text-primary-deep">{value}</h3>

@@ -18,6 +18,13 @@ export default function ClientelePage() {
         eyebrow="Clientele"
         title="Serving professionals, institutions, and executive leadership with confidence"
         description="Mayura Corp serves a diverse clientele, adapting training depth, format, and focus to the needs of each audience."
+        imageSrc="/profile-assets/pdf-image-05-1746x474.jpg"
+        imageAlt="Corporate clients collaborating around strategy documents"
+        highlights={[
+          "Individuals",
+          "SMEs and large corporations",
+          "Parastatals and top management"
+        ]}
       />
       <section className="container-shell py-20">
         <div className="mb-8 overflow-hidden rounded-[2rem] border border-line bg-white shadow-soft">

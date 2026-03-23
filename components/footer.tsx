@@ -69,6 +69,13 @@ export function Footer() {
           </div>
         </div>
       </div>
+      <div className="container-shell border-t border-white/10 py-5">
+        <div className="flex flex-col gap-3 text-xs uppercase tracking-[0.22em] text-white/45 md:flex-row md:items-center md:justify-between">
+          <p>Mayura Corp</p>
+          <p>Professional Training Solutions</p>
+          <p>Nairobi, Kenya</p>
+        </div>
+      </div>
     </footer>
   );
 }

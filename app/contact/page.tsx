@@ -19,6 +19,13 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Start a conversation about your training requirements"
         description="Share your goals, audience, and preferred delivery format, and Mayura Corp will respond with a suitable next step."
+        imageSrc="/profile-assets/pdf-image-02-916x1000.jpg"
+        imageAlt="Professional working at a laptop in a calm office setting"
+        highlights={[
+          "Training inquiries",
+          "Flexible delivery options",
+          "Professional response"
+        ]}
       />
       <section className="container-shell grid gap-8 py-20 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="space-y-6">
