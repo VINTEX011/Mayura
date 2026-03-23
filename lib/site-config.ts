@@ -14,6 +14,8 @@ export const company = {
     "To inspire excellence by providing comprehensive and innovative training solutions that foster personal and professional growth.",
   overview:
     "Mayura Corp is a dynamic and forward-thinking training company dedicated to empowering individuals and organizations with the knowledge and skills needed to thrive in today’s competitive business landscape.",
+  profileIntro:
+    "Established in 2023, the company has consistently delivered high-quality professional training programs tailored to meet the evolving needs of its clients.",
   socialLinks: [
     { label: "LinkedIn", href: "#" },
     { label: "X", href: "#" },
@@ -36,27 +38,27 @@ export const offerings = [
   {
     title: "Customized Training Programs",
     description:
-      "Targeted learning experiences aligned to operational goals, leadership priorities, and measurable workforce outcomes."
+      "Tailored to the unique needs of individuals and organizations, these programs cover a wide range of industries and skill sets."
   },
   {
     title: "Cutting-edge Curriculum",
     description:
-      "Modern content shaped around current industry realities, practical application, and decision-ready knowledge."
+      "Curriculum is regularly updated to reflect the latest industry trends, technologies, and best practices."
   },
   {
     title: "Flexible Delivery Formats",
     description:
-      "In-person, virtual, and hybrid training models designed to fit timelines, teams, and geographic distribution."
+      "Whether in-person, virtual, or hybrid, delivery is designed to suit diverse learning preferences and logistical realities."
   },
   {
     title: "Industry Experts",
     description:
-      "Facilitators with deep field experience who connect strategy, operations, and leadership development."
+      "Experienced trainers and industry experts bring practical knowledge and real-world insight to every engagement."
   },
   {
     title: "Certification Programs",
     description:
-      "Structured learning paths that help participants validate capability and demonstrate professional progress."
+      "Industry-recognized certification programs validate the skills and competencies gained through training."
   }
 ] as const;
 

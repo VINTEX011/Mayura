@@ -164,7 +164,7 @@ export function ContactForm() {
           value={values.message}
           aria-invalid={Boolean(getError("message"))}
           aria-describedby={getError("message") ? "message-error" : undefined}
-          className="mt-2 w-full rounded-2xl border border-line bg-white px-4 py-3 text-sm text-foreground shadow-sm outline-none placeholder:text-muted/60"
+          className="mt-2 w-full rounded-2xl border border-line bg-slate-50/70 px-4 py-3 text-sm text-foreground shadow-sm outline-none placeholder:text-muted/60 focus:border-primary focus:bg-white"
           onChange={(event) =>
             setValues((current) => ({ ...current, message: event.target.value }))
           }
@@ -192,7 +192,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={submitting}
-          className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/20 hover:-translate-y-0.5 hover:bg-primary-deep disabled:cursor-not-allowed disabled:opacity-70"
+          className="rounded-full bg-primary-deep px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-deep/15 hover:-translate-y-0.5 hover:bg-primary disabled:cursor-not-allowed disabled:opacity-70"
         >
           {submitting ? "Sending inquiry..." : "Send inquiry"}
         </button>
@@ -241,7 +241,7 @@ function Field({
         maxLength={maxLength}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? `${name}-error` : undefined}
-        className="mt-2 w-full rounded-2xl border border-line bg-white px-4 py-3 text-sm text-foreground shadow-sm outline-none placeholder:text-muted/60"
+        className="mt-2 w-full rounded-2xl border border-line bg-slate-50/70 px-4 py-3 text-sm text-foreground shadow-sm outline-none placeholder:text-muted/60 focus:border-primary focus:bg-white"
         onChange={(event) => onChange(event.target.value)}
       />
       {error ? (

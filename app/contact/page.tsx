@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
 import { buildMetadata, buildPageTitle } from "@/lib/metadata";
@@ -15,12 +17,12 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Request a training consultation"
-        description="Tell us about your goals, audience, and preferred delivery format, and Mayura Corp will be in touch."
+        title="Start a conversation about your training requirements"
+        description="Share your goals, audience, and preferred delivery format, and Mayura Corp will respond with a suitable next step."
       />
-      <section className="container-shell grid gap-8 py-16 lg:grid-cols-[0.9fr_1.1fr]">
+      <section className="container-shell grid gap-8 py-20 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="space-y-6">
-          <article className="card-surface rounded-[1.6rem] p-7">
+          <article className="premium-outline card-surface rounded-[1.7rem] p-7">
             <h2 className="text-2xl font-semibold text-primary-deep">Office address</h2>
             <address className="mt-4 not-italic text-base leading-8 text-muted">
               {company.addressLines.map((line) => (
@@ -28,18 +30,27 @@ export default function ContactPage() {
               ))}
             </address>
           </article>
-          <article className="rounded-[1.6rem] border border-line bg-white p-7">
-            <h2 className="text-2xl font-semibold text-primary-deep">Contact details</h2>
-            <div className="mt-4 space-y-3 text-base text-muted">
-              <a className="block hover:text-primary" href={`mailto:${company.email}`}>
-                {company.email}
-              </a>
-              <a className="block hover:text-primary" href={`tel:${company.phone}`}>
-                {company.phone}
-              </a>
+          <article className="overflow-hidden rounded-[1.7rem] border border-line bg-white shadow-soft">
+            <Image
+              src="/profile-assets/pdf-image-02-916x1000.jpg"
+              alt="Professional working at a laptop in a calm office setting"
+              width={916}
+              height={1000}
+              className="h-60 w-full object-cover"
+            />
+            <div className="p-7">
+              <h2 className="text-2xl font-semibold text-primary-deep">Contact details</h2>
+              <div className="mt-4 space-y-3 text-base text-muted">
+                <a className="block hover:text-primary" href={`mailto:${company.email}`}>
+                  {company.email}
+                </a>
+                <a className="block hover:text-primary" href={`tel:${company.phone}`}>
+                  {company.phone}
+                </a>
+              </div>
             </div>
           </article>
-          <article className="rounded-[1.6rem] border border-dashed border-line bg-surface-muted p-7">
+          <article className="rounded-[1.7rem] border border-dashed border-line bg-surface-muted p-7">
             <h2 className="text-2xl font-semibold text-primary-deep">Map placeholder</h2>
             <p className="mt-4 text-base leading-8 text-muted">
               Third-party map embeds are intentionally disabled by default to

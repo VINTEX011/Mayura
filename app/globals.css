@@ -1,20 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f9fc;
-  --foreground: #10233f;
+  --background: #f8fafc;
+  --foreground: #111827;
   --surface: #ffffff;
-  --surface-muted: #e9eef6;
-  --line: rgba(16, 35, 63, 0.12);
-  --primary: #103d78;
-  --primary-deep: #0a2a52;
+  --surface-muted: #eef2f7;
+  --line: #e5e7eb;
+  --primary: #1e3a8a;
+  --primary-deep: #0f172a;
   --accent: #d97706;
-  --accent-soft: #fff1dd;
-  --muted: #4f6480;
+  --accent-soft: #fff5e8;
+  --muted: #6b7280;
   --success: #0f766e;
   --error: #b42318;
-  --shadow: 0 24px 48px rgba(16, 35, 63, 0.1);
-  --font-sans: "Segoe UI", "Helvetica Neue", sans-serif;
+  --shadow: 0 24px 70px rgba(15, 23, 42, 0.09);
+  --shadow-soft: 0 12px 32px rgba(15, 23, 42, 0.06);
+  --font-sans:
+    "Aptos", "Segoe UI", "Helvetica Neue", Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-display:
+    "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, ui-serif, serif;
 }
 
 * {
@@ -29,8 +33,9 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at top left, rgba(16, 61, 120, 0.06), transparent 28%),
-    linear-gradient(180deg, #fbfcfe 0%, var(--background) 100%);
+    radial-gradient(circle at top left, rgba(30, 58, 138, 0.07), transparent 25%),
+    radial-gradient(circle at top right, rgba(217, 119, 6, 0.08), transparent 20%),
+    linear-gradient(180deg, #fcfdff 0%, var(--background) 100%);
   color: var(--foreground);
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
@@ -63,19 +68,30 @@ img {
   --color-muted: var(--muted);
   --color-success: var(--success);
   --color-error: var(--error);
-  --shadow-soft: var(--shadow);
+  --shadow-soft: var(--shadow-soft);
 }
 
 @utility container-shell {
   margin-inline: auto;
-  width: min(100% - 2rem, 74rem);
+  width: min(100% - 2rem, 76rem);
 }
 
 @utility card-surface {
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.98);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(18px);
+}
+
+@utility section-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+@utility section-shell-muted {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(238, 242, 247, 0.78) 0%, rgba(248, 250, 252, 0.86) 100%);
 }
 
 @utility focus-ring {
@@ -88,7 +104,14 @@ img {
   h2,
   h3,
   h4 {
+    font-family: var(--font-display);
     letter-spacing: -0.03em;
+    line-height: 1.08;
+    color: var(--primary-deep);
+  }
+
+  p {
+    line-height: 1.8;
   }
 
   a,
@@ -111,5 +134,30 @@ img {
   textarea:focus-visible,
   select:focus-visible {
     @apply focus-ring;
+  }
+
+  section {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@layer components {
+  .premium-outline {
+    position: relative;
+  }
+
+  .premium-outline::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.18), rgba(217, 119, 6, 0.24));
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
   }
 }

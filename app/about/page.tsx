@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { PageHero } from "@/components/page-hero";
 import { buildMetadata, buildPageTitle } from "@/lib/metadata";
 import { company, coreValues } from "@/lib/site-config";
@@ -14,56 +16,68 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Mayura Corp"
-        title="A modern training company focused on growth, rigor, and trust"
-        description={`${company.overview} The company partners with clients to strengthen personal and professional capability through relevant, high-quality learning.`}
+        title="A dynamic and forward-thinking company dedicated to professional growth"
+        description={`${company.overview} ${company.profileIntro}`}
       />
-      <section className="container-shell grid gap-8 py-16 md:grid-cols-2">
-        <article className="card-surface rounded-[1.6rem] p-8">
+      <section className="container-shell grid gap-8 py-20 md:grid-cols-[1.05fr_0.95fr]">
+        <article className="premium-outline card-surface rounded-[1.8rem] p-8">
           <h2 className="text-2xl font-semibold text-primary-deep">Company overview</h2>
           <p className="mt-4 text-base leading-8 text-muted">
-            Established in {company.founded}, Mayura Corp is dedicated to
-            delivering training that helps individuals and organizations thrive
-            in a competitive business environment. Each engagement is designed
-            to reflect client priorities, operational realities, and the need
-            for credible outcomes.
+            {company.overview} {company.profileIntro}
           </p>
         </article>
-        <article className="rounded-[1.6rem] border border-line bg-white p-8">
-          <h2 className="text-2xl font-semibold text-primary-deep">Mission</h2>
-          <p className="mt-4 text-base leading-8 text-muted">{company.mission}</p>
+        <article className="overflow-hidden rounded-[1.8rem] border border-line bg-white shadow-soft">
+          <Image
+            src="/profile-assets/pdf-image-06-1303x1333.jpg"
+            alt="Professionals meeting and building client relationships"
+            width={1303}
+            height={1333}
+            className="h-72 w-full object-cover"
+          />
+          <div className="p-8">
+            <h2 className="text-2xl font-semibold text-primary-deep">Mission</h2>
+            <p className="mt-4 text-base leading-8 text-muted">{company.mission}</p>
+            <p className="mt-4 text-base leading-8 text-muted">
+              The company is committed to equipping individuals and organizations
+              with the tools and expertise necessary to succeed in their
+              respective fields.
+            </p>
+          </div>
         </article>
       </section>
-      <section className="container-shell py-8">
+      <section className="section-shell-muted py-20">
+        <div className="container-shell">
         <h2 className="text-3xl font-semibold text-primary-deep">Core values</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
           {coreValues.map((value) => (
-            <article key={value} className="card-surface rounded-[1.4rem] p-6">
+            <article key={value} className="card-surface rounded-[1.5rem] p-6">
               <h3 className="text-lg font-semibold text-primary-deep">{value}</h3>
               <p className="mt-3 text-sm leading-7 text-muted">
                 {value === "Excellence" &&
-                  "We hold our programs, facilitation, and client experience to a consistently high standard."}
+                  "We strive for excellence in everything we do, ensuring our training programs meet and exceed industry standards."}
                 {value === "Innovation" &&
-                  "We keep our training methods and curriculum responsive to changing industry expectations."}
+                  "We continuously evolve our training methods to stay ahead of industry trends and deliver cutting-edge solutions."}
                 {value === "Integrity" &&
-                  "We work with professionalism, transparency, and dependable follow-through."}
+                  "We uphold the highest ethical standards, fostering honesty, transparency, and accountability."}
                 {value === "Client-Centric" &&
-                  "We shape our engagements around the priorities, context, and goals of each client."}
+                  "Our clients are at the heart of the business, and we are dedicated to understanding and exceeding their expectations."}
                 {value === "Collaboration" &&
-                  "We believe learning is strongest when it is participatory, practical, and aligned across teams."}
+                  "We believe in the power of collaboration, working closely with clients and partners to achieve mutual success."}
               </p>
             </article>
           ))}
         </div>
+        </div>
       </section>
-      <section className="container-shell py-16">
-        <div className="rounded-[2rem] bg-primary px-8 py-10 text-white md:px-12">
+      <section className="container-shell py-20">
+        <div className="premium-outline rounded-[2rem] bg-primary-deep px-8 py-12 text-white md:px-12">
           <h2 className="text-3xl font-semibold">
             Excellence and innovation guide every training engagement.
           </h2>
           <p className="mt-4 max-w-3xl text-base leading-8 text-white/78">
-            Mayura Corp combines disciplined program design with fresh thinking
-            so clients receive training that feels current, relevant, and ready
-            to support meaningful progress.
+            Mayura Corp combines professional discipline, innovative training
+            methods, and client-centered service to deliver learning
+            experiences that are relevant, practical, and credible.
           </p>
         </div>
       </section>
